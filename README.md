@@ -6,7 +6,6 @@
 현대차·기아 차량용 앱 공모전 출품작이며, Pleos Connect(AAOS 기반) 차량 화면을 기준으로 만들었습니다.
 
 - 제출자: 홍제호
-- 시연 영상: [영상 링크를 여기에 붙여넣기]
 
 ## 주요 기능
 
@@ -42,6 +41,7 @@ adb uninstall com.example.jeho
 ## 테스트 환경 및 필요한 설정
 
 - 환경: Pleos Connect 에뮬레이터 v2.1.0 (Android API 34)
+- 화면 규격: 2560×1440 px, 160dpi (Pleos Connect 에뮬레이터 기본 화면, 가로형). 앱은 이 화면의 우측 영역에 표시됩니다.
 - 앱 설정: minSdk 28, targetSdk 37
 - 사용 SDK
     - `ai.pleos.playground:Vehicle:2.3.2` (주행 거리, 연비, 전비)
@@ -64,7 +64,7 @@ adb uninstall com.example.jeho
    ```
    for i in 1 2 3 4 5 6 7 8 9 10 11 12; do
      adb emu geo fix $(echo "126.9780 + $i*0.0006" | bc -l) 37.5665
-     sleep 2
+     sleep 3
    done
    ```
 4. **주행 거리 올리기**: 가상 콘솔을 열고 Odometer 값을 올립니다.
